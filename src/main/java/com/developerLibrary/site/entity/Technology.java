@@ -12,6 +12,8 @@ public class Technology {
     private Long id;
     @Column(unique = true, nullable = false)
     private String name;
+    @Column
+    private String img;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "technology")
     private List<Category> categories = new ArrayList<>();
@@ -43,11 +45,20 @@ public class Technology {
         this.categories = categories;
     }
 
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
     @Override
     public String toString() {
         return "Technology{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", img='" + img + '\'' +
                 ", categories=" + categories +
                 '}';
     }

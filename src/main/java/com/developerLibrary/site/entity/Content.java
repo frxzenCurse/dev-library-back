@@ -97,6 +97,9 @@ public class Content {
         return "Content{" +
                 "id=" + id +
                 ", url='" + url + '\'' +
+                ", description='" + description + '\'' +
+                ", title='" + title + '\'' +
+                ", image='" + image + '\'' +
                 ", type=" + type +
                 ", category=" + category +
                 '}';
